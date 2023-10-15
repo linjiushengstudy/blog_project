@@ -1,0 +1,16 @@
+.custom-text-color {
+    color: #FF5733; /* 您的自定义文本颜色 */
+}
+
+.custom-bg-color {
+    display: block;
+    background-color: #337AFF; /* 您的自定义背景颜色 */
+}
+/* 在custom.css中定义样式 */
+.comment-content {
+    float: left; /* 左对齐 */
+}
+
+.comment-date {
+    float: right; /* 右对齐 */
+}

@@ -1,0 +1,39 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Blog Post List</title>
+    <!-- 引入Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <!-- 引入自定义CSS文件（根据您的项目路径） -->
+    <link rel="stylesheet" href="{% static 'css/custom.css' %}">
+</head>
+<body>
+<div class="container">
+    <h1 class="display-4 text-primary">Blog Post List</h1>
+
+    {% for post in posts %}
+        <div class="card mb-4 bg-info">
+            <div class="card-body">
+                <h2 class="card-title"><a href="{% url 'post_detail' post.id %}">{{ post.title }}</a></h2>
+                <p class="card-text">{{ post.pub_date|date:"F d, Y" }}</p>
+                <p class="card-text">{{ post.content }}</p>
+                <h3 class="card-title">Comments:</h3>
+                <ul class="list-group list-group-flush">
+                    {% for comment in post.comment_set.all %}
+                        <li class="list-group-item custom-bg-color">
+                            <div class="comment-content">{{ comment.text }}</div>
+                            <div class="comment-date text-muted">{{ comment.pub_date|date:"F d, Y H:i" }}</div>
+                        </li>
+                    {% empty %}
+                        <li class="list-group-item">No comments yet.</li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    {% empty %}
+        <p>No blog posts available.</p>
+    {% endfor %}
+</div>
+</body>
+</html>

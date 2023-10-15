@@ -1,0 +1,67 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+__init__.py
+
+# Environment
+.env
+venv/
+.env/
+env/
+
+# Dependencies
+lib/
+lib64/
+bin/
+include/
+libexec/
+share/
+var/
+lib64
+pip-selfcheck.json
+
+# Virtual Environment
+venv/
+__venv/
+.vscode/
+.idea/
+
+# Byte-compiled / optimized files
+*.pyc
+*.pyo
+
+# IDE files
+/.idea
+/.vscode
+
+# Compiled source
+__pycache__/
+
+# Logs and databases
+*.log
+*.sqlite
+db.sqlite3
+
+# PyCharm settings
+.idea/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+desktop.ini
+
+# Compiled Python files
+*.pyc
+
+# Byte-compiled Python files
+__pycache__/
+
+# Python installer logs
+pip-log.txt
